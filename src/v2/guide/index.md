@@ -12,7 +12,7 @@ Vue (дуудлага нь / vjuː /, **view** шиг) нь хэрэглэгчи
 
 Та frontend хөгжүүлэгчээр ажилладаг туршлагатай бол Vue болон бусад libraries/framework-ийг харьцуулж хараарай [Бусад Framework-уудтай харьцуулсан](comparison.html).
 
-<div class="vue-mastery"><a href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/" target="_blank" rel="noopener" title="Free Vue.js Course">Vue Mastery үнэгүй видео хичээл үзээрэй</a></div>
+<div class="vue-mastery"><a href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/" target="_blank" rel="sponsored noopener" title="Free Vue.js Course">Vue Mastery үнэгүй видео хичээл үзээрэй</a></div>
 
 ## Эхлэх
 
@@ -400,4 +400,4 @@ Vue тодроо custom element ашигладаггүй, гэвч [great intero
 
 Бид Vue.js core-ийн хамгийн чухал үндсэн функцуудыг товч танилцуулсан - энэхүү гарын авлагын үлдсэн хэсэг нь эдгээр болон бусад дэвшилтэт функцуудыг илүү нарийвчилсан мэдээлэлтэй хамрах бөгөөд тэдгээрийг бүгдийг нь уншихаа мартуузай!
 
-<div id="video-modal" class="modal"><div class="video-space" style="padding: 56.25% 0 0 0; position: relative;"><iframe src="https://player.vimeo.com/video/247494684" style="height: 100%; left: 0; position: absolute; top: 0; width: 100%; margin: 0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script><p class="modal-text">Video by <a href="https://www.vuemastery.com" target="_blank" rel="noopener" title="Vue.js Courses on Vue Mastery">Vue Mastery</a>. Watch Vue Mastery’s free <a href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/" target="_blank" rel="noopener" title="Vue.js Courses on Vue Mastery">Intro to Vue course</a>.</div>
+<div id="video-modal" class="modal"><div class="video-space" style="padding: 56.25% 0 0 0; position: relative;"><iframe src="https://player.vimeo.com/video/247494684" style="height: 100%; left: 0; position: absolute; top: 0; width: 100%; margin: 0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script><p class="modal-text">Video by <a href="https://www.vuemastery.com" target="_blank" rel="sponsored noopener" title="Vue.js Courses on Vue Mastery">Vue Mastery</a>. Watch Vue Mastery’s free <a href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/" target="_blank" rel="sponsored noopener" title="Vue.js Courses on Vue Mastery">Intro to Vue course</a>.</div>

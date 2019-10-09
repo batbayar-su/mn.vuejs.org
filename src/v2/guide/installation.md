@@ -76,7 +76,7 @@ Vue нь [албан ёсны CLI](https://github.com/vuejs/vue-cli) байда�
 
 <p class="tip">Та CLI ашиглахын тулд Node.js болон түүнтэй холбоотой багаж хэрэгслүүдийн талаар мэдлэгтэй байх хэрэгтэй. Хэрэв та шинээр Vue болон front-end build tools зэргийн шинээр ашиглаж эхлэх гэж байгаа бол CLI ашиглахын өмнө эхлээд <a href="./">энэхүү зааварыг</a> ашиглахыг санал болгож байна.</p>
 
-<div class="vue-mastery"><a href="https://www.vuemastery.com/courses/real-world-vue-js/vue-cli" target="_blank" rel="noopener" title="Vue CLI">Vue Mastery дээр тайлбар бичлэгийг үзээрэй</a></div>
+<div class="vue-mastery"><a href="https://www.vuemastery.com/courses/real-world-vue-js/vue-cli" target="_blank" rel="sponsored noopener" title="Vue CLI">Vue Mastery дээр тайлбар бичлэгийг үзээрэй</a></div>
 
 ## Өөр хувилбаруудын тайлбар
 
