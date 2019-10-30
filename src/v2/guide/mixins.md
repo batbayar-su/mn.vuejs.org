@@ -6,11 +6,11 @@ order: 301
 
 ## Basics
 
-Mixins are a flexible way to distribute reusable functionalities for Vue components. A mixin object can contain any component options. When a component uses a mixin, all options in the mixin will be "mixed" into the component's own options.
+Mixins бол дахин ашиглагдах функционалуудыг Vue components-аас салгах маш уян хатан арга юм. Mixin объект нь ямар ч компонентын option-уудыг агуулах боломжтой. Компонент mixin хэрэглэхэд mixin доторх бүх option-ууд нь компонентын option-уудтай холилдох болно.
 
-<div class="vue-mastery"><a href="https://www.vuemastery.com/courses/next-level-vue/mixins" target="_blank" rel="noopener" title="Mixins Tutorial">Watch a video explanation on Vue Mastery</a></div>
+<div class="vue-mastery"><a href="https://www.vuemastery.com/courses/next-level-vue/mixins" target="_blank" rel="noopener" title="Mixins Tutorial">Vue Mastery дээрх тайлбар бичлэгийг үзэх</a></div>
 
-Example:
+Жишээ:
 
 ``` js
 // define a mixin object
@@ -33,11 +33,11 @@ var Component = Vue.extend({
 var component = new Component() // => "hello from mixin!"
 ```
 
-## Option Merging
+## Option нэгтгэх
 
-When a mixin and the component itself contain overlapping options, they will be "merged" using appropriate strategies.
+Mixin болон компонент давхардсан option-ууд агуулж байвал тэдгээр нь зохистой стратеги ашиглаж нэгтгэгддэг.
 
-For example, data objects undergo a recursive merge, with the component's data taking priority in cases of conflicts.
+Жишээ нь, дата объектууд нь энэхүү нэгтгэх явцыг давахад компонентын дата нь давхарлалт үүсэх нөхцөлд давуу эрхтэй байна.
 
 ``` js
 var mixin = {
@@ -64,7 +64,7 @@ new Vue({
 })
 ```
 
-Hook functions with the same name are merged into an array so that all of them will be called. Mixin hooks will be called **before** the component's own hooks.
+Ижил нэртэй hook функцууд нь array-руу нэгтгэгддэг учир тэдгээр нь бүгд дуудагдах юм. Mixin-ы hook-үүд компонентын hook-үүдийн **өмнө** дуудагдах болно.
 
 ``` js
 var mixin = {
@@ -84,7 +84,7 @@ new Vue({
 // => "component hook called"
 ```
 
-Options that expect object values, for example `methods`, `components` and `directives`, will be merged into the same object. The component's options will take priority when there are conflicting keys in these objects:
+Объект утгууд ашигладаг option-ууд, жишээ нь `methods`, `components`, `directives`, нь ижил объект дотор нэгтгэгдэнэ. Тэдгээр объектуудад түлхүүр үгийн давхардал үүсэх үед компонентын option-ууд давуу эрхийг авах болно:
 
 ``` js
 var mixin = {
@@ -115,14 +115,14 @@ vm.bar() // => "bar"
 vm.conflicting() // => "from self"
 ```
 
-Note that the same merge strategies are used in `Vue.extend()`.
+`Vue.extend()` дээр үүнтэй ижил нэгтгэх стратеги ашиглагддагийг анхаараарай.
 
-## Global Mixin
+## Глобал Mixin
 
-You can also apply a mixin globally. Use with caution! Once you apply a mixin globally, it will affect **every** Vue instance created afterwards. When used properly, this can be used to inject processing logic for custom options:
+Та mixin-г глобал байдлаар ашиглах мөн боломжтой. Болгоомжтой ашиглаарай! Нэгэнт глобал mixin ашиглавал энэ нь түүнээс хойш үүсэх бүх Vue Instance-д нөлөөлнө. Зохистой хэрэглэвэл үүнийг өөрийн тусгай option-ууд процесс логикийг оруулахад хэрэглэх боломжтой.
 
 ``` js
-// inject a handler for `myOption` custom option
+// `myOption` тусгай option-д handler оруулах
 Vue.mixin({
   created: function () {
     var myOption = this.$options.myOption
@@ -138,11 +138,11 @@ new Vue({
 // => "hello!"
 ```
 
-<p class="tip">Use global mixins sparsely and carefully, because it affects every single Vue instance created, including third party components. In most cases, you should only use it for custom option handling like demonstrated in the example above. It's also a good idea to ship them as [Plugins](plugins.html) to avoid duplicate application.</p>
+<p class="tip">Vue instance-н ширхэг бүрд нөлөөлдөг, гадаад сан байсан ч, учир глобал mixin-г бага хэмжээгээр анхааралтай ашиглах хэрэгтэй. Ихэнх тохиолдолд дээр дүрсэлсэн жишээ шиг тусгай option-г зохицуулах зорилгод л ашиглах нь зүйтэй. Мөн үүнийг [Plugins](plugins.html) байдлаар хүргэх нь аппликешн хувилагдахаас сэргийлэх сайхан санаа юм.</p>
 
-## Custom Option Merge Strategies
+## Тустай Option Нэгтгэх Стратеги
 
-When custom options are merged, they use the default strategy which overwrites the existing value. If you want a custom option to be merged using custom logic, you need to attach a function to `Vue.config.optionMergeStrategies`:
+Тусгай option-ууд нэгтгэгдэхдээ үндсэн стратеги болох өмнө байсныг дарж ажилладаг. Хэрвээ тусгай option-г тусгай логикоор нэгтгэхийг хүсвэл `Vue.config.optionMergeStrategies` дотор функцээ оруулж өгөх хэрэгтэй:
 
 ``` js
 Vue.config.optionMergeStrategies.myOption = function (toVal, fromVal) {
@@ -150,14 +150,14 @@ Vue.config.optionMergeStrategies.myOption = function (toVal, fromVal) {
 }
 ```
 
-For most object-based options, you can use the same strategy used by `methods`:
+Ихэнх объект дээр суурилсан option-уудад `methods` дээр хэрэглэгддэгтэй ижил стратеги хэрэглэж болно:
 
 ``` js
 var strategies = Vue.config.optionMergeStrategies
 strategies.myOption = strategies.methods
 ```
 
-A more advanced example can be found on [Vuex](https://github.com/vuejs/vuex)'s 1.x merging strategy:
+Илүү ярвигтай жишээг [Vuex](https://github.com/vuejs/vuex)-н 1.x нэгтгэх стратегиас харах боломжтой:
 
 ``` js
 const merge = Vue.config.optionMergeStrategies.computed
