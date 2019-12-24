@@ -4,6 +4,8 @@ type: guide
 order: 9
 ---
 
+<div class="vueschool"><a href="https://vueschool.io/lessons/vuejs-user-events?friend=vuejs" target="_blank" rel="sponsored noopener" title="Learn how to handle events on Vue School">Learn how to handle events in a free Vue School lesson</a></div>
+
 ## Listening to Events
 
 We can use the `v-on` directive to listen to DOM events and run some JavaScript when they're triggered.
@@ -154,7 +156,9 @@ Sometimes we also need to access the original DOM event in an inline statement h
 methods: {
   warn: function (message, event) {
     // now we have access to the native event
-    if (event) event.preventDefault()
+    if (event) {
+      event.preventDefault()
+    }
     alert(message)
   }
 }
